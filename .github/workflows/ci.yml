@@ -31,3 +31,9 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Build backend Docker image
+        run: docker build -t realworld-backend:test -f backend/Dockerfile .
+
+      - name: Build frontend Docker image
+        run: docker build -t realworld-frontend:test -f frontend/Dockerfile .
