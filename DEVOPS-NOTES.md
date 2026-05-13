@@ -95,4 +95,14 @@ Committed and pushed the fix.
 Verified that the GitHub Actions pipeline completed successfully.
 
 
+## Step 5 — Docker Image Validation in CI
+
+Extended the GitHub Actions CI pipeline to validate Docker image builds for both backend and frontend services.
+
+Added automated Docker build steps:
+- Backend Docker image build
+- Frontend Docker image build
+
+Verified that container images can be successfully built in a clean CI environment during every push and pull request.
+
 
