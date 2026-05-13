@@ -37,3 +37,11 @@ jobs:
 
       - name: Build frontend Docker image
         run: docker build -t realworld-frontend:test -f frontend/Dockerfile .
+
+      - name: Run Trivy vulnerability scanner for backend image
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          image-ref: realworld-backend:test
+          format: table
+          exit-code: 0
+          severity: HIGH,CRITICAL
