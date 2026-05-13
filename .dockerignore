@@ -1,0 +1,9 @@
+node_modules
+.git
+.github
+.vscode
+coverage
+dist
+postgres_data
+*.log
+.env

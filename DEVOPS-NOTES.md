@@ -105,4 +105,17 @@ Added automated Docker build steps:
 
 Verified that container images can be successfully built in a clean CI environment during every push and pull request.
 
+## Step 6 — Docker Build Optimization
+
+Created a `.dockerignore` file to optimize Docker build context and reduce unnecessary files during image creation.
+
+Excluded:
+- node_modules
+- Git metadata
+- logs
+- local environment files
+- IDE settings
+- coverage and build artifacts
+
+Improved Docker build efficiency and reduced container build context size.
 
