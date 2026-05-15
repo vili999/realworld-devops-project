@@ -187,3 +187,20 @@ Implemented:
 Verified runtime resource usage with Docker statistics monitoring.
 
 Improved container resource management and production-style environment configuration.
+
+## Step 12 — Environment Variable Templates
+
+Created environment variable template files for configuration management.
+
+Implemented:
+- `.env.example` template files
+- Separation of configuration templates from real secrets
+- Improved project onboarding and deployment preparation
+- `.gitignore` protection for sensitive environment files
+
+Configured environment templates for:
+- Backend application settings
+- Database connection settings
+- Development, testing, and production environments
+
+Applied DevOps best practices for secret and configuration management.
