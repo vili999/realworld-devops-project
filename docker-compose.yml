@@ -2,6 +2,7 @@ services:
   postgres:
     image: postgres:16-alpine
     container_name: realworld-postgres
+    restart: unless-stopped
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -21,6 +22,7 @@ services:
       context: .
       dockerfile: backend/Dockerfile
     container_name: realworld-backend
+    restart: unless-stopped
     env_file:
       - backend/.env
     ports:
@@ -42,6 +44,7 @@ services:
       context: .
       dockerfile: frontend/Dockerfile
     container_name: realworld-frontend
+    restart: unless-stopped
     ports:
       - "3000:80"
     depends_on:
@@ -49,5 +52,7 @@ services:
     volumes:
       - ./frontend:/app/frontend
       - /app/frontend/node_modules
+
 volumes:
   postgres_data:
+

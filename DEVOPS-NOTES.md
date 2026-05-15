@@ -162,3 +162,16 @@ Verified that:
 - Frontend container runs successfully
 
 Confirmed successful multi-container orchestration with health monitoring.
+
+## Step 10 — Container Restart Policies
+
+Configured restart policies for frontend, backend, and PostgreSQL containers using:
+
+restart: unless-stopped
+
+Implemented automatic container recovery behavior to improve service reliability and resilience in case of crashes or Docker daemon restarts.
+
+Verified that:
+- Backend container is running and healthy
+- PostgreSQL container is running and healthy
+- Frontend container is running successfully
