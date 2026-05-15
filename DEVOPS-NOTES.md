@@ -119,3 +119,17 @@ Excluded:
 
 Improved Docker build efficiency and reduced container build context size.
 
+## Step 7 — Multi-stage Frontend Docker Build
+
+Improved the frontend Dockerfile by using a multi-stage build.
+
+Implemented:
+- Node.js build stage for compiling the React/Vite application
+- Nginx runtime stage for serving static production files
+- Smaller and cleaner frontend container image
+- Production-style container serving on port 80
+
+Updated Docker Compose port mapping from `3000:3000` to `3000:80`.
+
+Verified that the frontend is accessible at http://localhost:3000.
+
