@@ -175,3 +175,15 @@ Verified that:
 - Backend container is running and healthy
 - PostgreSQL container is running and healthy
 - Frontend container is running successfully
+
+## Step 11 — Container Resource Limits
+
+Configured CPU and memory limits for frontend, backend, and PostgreSQL containers.
+
+Implemented:
+- Memory limits using `mem_limit`
+- CPU allocation using `cpus`
+
+Verified runtime resource usage with Docker statistics monitoring.
+
+Improved container resource management and production-style environment configuration.

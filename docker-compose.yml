@@ -3,6 +3,8 @@ services:
     image: postgres:16-alpine
     container_name: realworld-postgres
     restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.50
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -23,6 +25,8 @@ services:
       dockerfile: backend/Dockerfile
     container_name: realworld-backend
     restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.50
     env_file:
       - backend/.env
     ports:
@@ -45,6 +49,8 @@ services:
       dockerfile: frontend/Dockerfile
     container_name: realworld-frontend
     restart: unless-stopped
+    mem_limit: 512m
+    cpus: 0.50
     ports:
       - "3000:80"
     depends_on:
