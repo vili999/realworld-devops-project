@@ -147,3 +147,18 @@ Debugged workspace dependency behavior where npm installed dependencies in `/app
 
 Verified that the backend container runs successfully and the API is reachable at http://localhost:3001.
 
+## Step 9 — Backend Container Healthcheck
+
+Added a backend container healthcheck to Docker Compose.
+
+Implemented:
+- Automated HTTP availability check for the backend API
+- Health monitoring using Docker Compose healthcheck configuration
+- Retry and timeout configuration for service validation
+
+Verified that:
+- PostgreSQL container reports healthy status
+- Backend container reports healthy status
+- Frontend container runs successfully
+
+Confirmed successful multi-container orchestration with health monitoring.
