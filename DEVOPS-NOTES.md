@@ -133,3 +133,17 @@ Updated Docker Compose port mapping from `3000:3000` to `3000:80`.
 
 Verified that the frontend is accessible at http://localhost:3000.
 
+## Step 8 — Multi-stage Backend Docker Build
+
+Improved the backend Dockerfile using a multi-stage build approach.
+
+Implemented:
+- Separate dependency installation stage
+- Cleaner final runtime image
+- Improved Docker layer caching
+- Reduced unnecessary build complexity
+
+Debugged workspace dependency behavior where npm installed dependencies in `/app/node_modules` instead of `/app/backend/node_modules`.
+
+Verified that the backend container runs successfully and the API is reachable at http://localhost:3001.
+
