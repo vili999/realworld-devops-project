@@ -9,6 +9,55 @@ This codebase was created to demonstrate a fully fledged fullstack application b
 > For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
 ---
+---
+
+# DevOps Enhancements
+
+This project was additionally extended with practical DevOps-oriented improvements and infrastructure automation.
+
+## Implemented DevOps Features
+
+- Dockerized frontend, backend, and PostgreSQL services
+- Docker Compose multi-container orchestration
+- GitHub Actions CI pipeline
+- Automated frontend build and test execution
+- Docker image validation in CI
+- Trivy security scanning in CI pipeline
+- Multi-stage Docker builds for frontend and backend
+- Backend and PostgreSQL healthchecks
+- Container restart policies
+- CPU and memory resource limits
+- Environment variable templates (`.env.example`)
+- `.dockerignore` optimization
+- Persistent PostgreSQL Docker volume
+- SSH-based GitHub authentication
+
+## Local DevOps Setup
+
+Start all services:
+```bash
+docker compose up -d
+```
+
+Stop services:
+```bash
+docker compose down
+```
+
+Check containers:
+```bash
+docker compose ps
+```
+
+View logs:
+```bash
+docker compose logs -f
+```
+
+Application URLs:
+Frontend: http://localhost:3000
+Backend API: http://localhost:3001
+---
 
 ## Getting Started
 
