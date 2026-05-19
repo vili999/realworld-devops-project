@@ -204,3 +204,25 @@ Configured environment templates for:
 - Development, testing, and production environments
 
 Applied DevOps best practices for secret and configuration management.
+
+## Step 13 — Monitoring Stack with Prometheus and Grafana
+
+Added monitoring and observability services using Prometheus and Grafana.
+
+Implemented:
+- Prometheus metrics collection service
+- Grafana visualization platform
+- Docker Compose integration for monitoring stack
+- Prometheus scrape configuration
+- Grafana Prometheus datasource configuration
+
+Created initial monitoring dashboard:
+- Prometheus target status visualization
+- Basic service availability monitoring using Prometheus `up` metric
+
+Verified:
+- Prometheus accessible on port 9090
+- Grafana accessible on port 4000
+- Successful communication between Grafana and Prometheus
+
+Introduced DevOps monitoring and observability concepts into the project infrastructure.
