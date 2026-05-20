@@ -226,3 +226,27 @@ Verified:
 - Successful communication between Grafana and Prometheus
 
 Introduced DevOps monitoring and observability concepts into the project infrastructure.
+
+## Step 14 — Docker Container Metrics Monitoring
+
+Extended the monitoring stack with cAdvisor container metrics collection.
+
+Implemented:
+- cAdvisor service for Docker container monitoring
+- Prometheus integration with cAdvisor metrics endpoint
+- Container-level observability for Docker services
+
+Configured Prometheus scrape targets for:
+- Prometheus metrics
+- cAdvisor container metrics
+
+Verified:
+- cAdvisor accessible on port 8080
+- Prometheus targets reporting UP status
+- Successful container metrics collection
+
+Introduced container resource monitoring concepts including:
+- CPU usage monitoring
+- Memory usage monitoring
+- Network metrics
+- Filesystem metrics
