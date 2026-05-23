@@ -74,6 +74,8 @@ services:
     restart: unless-stopped
     ports:
       - "4000:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana  
 
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
@@ -89,4 +91,5 @@ services:
 
 volumes:
   postgres_data:
+  grafana_data:
 
