@@ -15,6 +15,55 @@ This codebase was created to demonstrate a fully fledged fullstack application b
 
 This project was additionally extended with practical DevOps-oriented improvements and infrastructure automation.
 
+## Architecture Overview
+
+The application consists of multiple Dockerized services orchestrated with Docker Compose:
+
+- Frontend: React/Vite application served by Nginx
+- Backend: Node.js/Express REST API
+- Database: PostgreSQL
+- Monitoring: Prometheus + Grafana + cAdvisor
+- CI/CD: GitHub Actions
+
+### Containerized Services
+
+| Service | Description | Port |
+|---|---|---|
+| Frontend | React/Vite + Nginx | 3000 |
+| Backend | Express.js API | 3001 |
+| PostgreSQL | Database | 5432 |
+| Prometheus | Metrics collection | 9090 |
+| Grafana | Monitoring dashboards | 4000 |
+| cAdvisor | Docker container metrics | 8080 |
+
+## Monitoring and Observability
+
+The project includes a monitoring stack using:
+- Prometheus for metrics collection
+- Grafana for dashboards and visualization
+- cAdvisor for Docker container metrics
+
+Implemented monitoring dashboards:
+- Container CPU usage
+- Container memory usage
+- Prometheus service availability
+
+Monitoring endpoints:
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:4000
+- cAdvisor: http://localhost:8080
+
+## CI/CD Pipeline
+
+GitHub Actions pipeline automatically performs:
+- dependency installation
+- frontend build
+- automated tests
+- Docker image validation
+- Trivy security scan
+
+The pipeline runs automatically on push and pull request events.
+
 ## Implemented DevOps Features
 
 - Dockerized frontend, backend, and PostgreSQL services
@@ -55,8 +104,11 @@ docker compose logs -f
 ```
 
 Application URLs:
-Frontend: http://localhost:3000
-Backend API: http://localhost:3001
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3001
+- Prometheus: http://localhost:9090
+- Grafana: http://localhost:4000
+
 ---
 
 ## Getting Started
@@ -171,6 +223,22 @@ The following command will build the production version of the app:
 npm run start
 ```
 
+## Monitoring Dashboard
+
+The project includes monitoring and observability using:
+- Prometheus
+- Grafana
+- cAdvisor
+
+Implemented dashboards:
+- Container CPU monitoring
+- Container memory monitoring
+- Docker container observability
+
+### Grafana Dashboard
+
+![Grafana Dashboard](screenshots/grafana-dashboard.png)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
@@ -181,3 +249,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [RealWorld (GitHub)](https://github.com/gothinkster/realworld)
 - [CodebaseShow](https://codebase.show/)
 - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
