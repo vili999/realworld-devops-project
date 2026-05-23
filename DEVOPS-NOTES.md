@@ -250,3 +250,77 @@ Introduced container resource monitoring concepts including:
 - Memory usage monitoring
 - Network metrics
 - Filesystem metrics
+
+## Step 15 — Container Resource Monitoring Dashboard
+
+Extended Grafana monitoring dashboards with Docker container resource metrics.
+
+Implemented:
+- CPU usage monitoring panels
+- Memory usage monitoring panels
+- Prometheus queries using cAdvisor metrics
+- Grafana time-series visualizations for container observability
+
+Added monitoring for:
+- Container CPU utilization
+- Container memory consumption
+
+Improved operational visibility of the containerized application environment.
+
+## Step 16 — Dashboard Metrics Cleanup
+
+Improved Grafana dashboard readability and monitoring quality.
+
+Implemented:
+- Filtering of unnecessary/system container metrics
+- Cleaner Prometheus queries using label filters
+- Human-readable container legends in Grafana panels
+
+Updated queries:
+- CPU monitoring using filtered container metrics
+- Memory monitoring using filtered container metrics
+
+Improved dashboard usability by displaying actual container names instead of raw metric labels.
+
+## Step 17 — Container Status Monitoring
+
+Added operational service status monitoring to Grafana dashboards.
+
+Implemented:
+- Prometheus service availability panels
+- Status visualization using Grafana Stat panels
+- Monitoring of Prometheus and cAdvisor service health
+
+Added operational monitoring capabilities for:
+- Service uptime
+- Monitoring stack availability
+- Container monitoring infrastructure status
+
+Introduced production-style operational monitoring concepts.
+
+## Step 18 — Persistent Grafana Storage
+
+Implemented persistent storage for Grafana dashboards and configuration.
+
+Added:
+- Docker volume for Grafana data persistence
+- Persistent dashboard storage
+- Persistent datasource configuration
+
+Improved monitoring stack reliability by preventing dashboard and configuration loss after container recreation.
+
+Introduced stateful container storage concepts using Docker volumes.
+
+## Step 19 — Persistent Grafana Storage
+
+Implemented persistent storage for Grafana dashboards and configuration.
+
+Added:
+- Docker volume for Grafana data persistence
+- Persistent dashboard storage
+- Persistent datasource configuration
+
+Improved monitoring stack reliability by preventing dashboard and configuration loss after container recreation.
+
+Introduced stateful container storage concepts using Docker volumes.
+
