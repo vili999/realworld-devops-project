@@ -239,6 +239,10 @@ Implemented dashboards:
 
 ![Grafana Dashboard](screenshots/grafana-dashboard.png)
 
+### Docker Compose Services
+
+![Docker Compose](screenshots/docker-compose-ps.png)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
